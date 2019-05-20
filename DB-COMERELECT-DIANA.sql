@@ -1,90 +1,4 @@
 
-CREATE TABLE ce_facturas_estatus
-( 
-	IdFactura            integer  NOT NULL ,
-	IdEstatusDet         int  NOT NULL ,
-	Actual               varchar(1)  NULL ,
-	Observacion          varchar(255)  NULL ,
-	FechaReg             datetime  NULL ,
-	UsuarioReg           varchar(20)  NULL ,
-	FechaUltMod         datetime  NULL ,
-	UsuarioMod           varchar(20)  NULL ,
-	IdEstatus            integer  NULL 
-)
-go
-
-
-
-ALTER TABLE ce_facturas_estatus
-	ADD  PRIMARY KEY  CLUSTERED (IdFactura ASC,IdEstatusDet ASC)
-go
-
-
-
-CREATE NONCLUSTERED INDEX XIF1ce_facturas_estatus ON ce_facturas_estatus
-( 
-	IdFactura             ASC
-)
-go
-
-
-
-CREATE NONCLUSTERED INDEX XIF2ce_facturas_estatus ON ce_facturas_estatus
-( 
-	IdEstatus             ASC
-)
-go
-
-
-
-
-ALTER TABLE ce_facturas_estatus
-	ADD  FOREIGN KEY (IdFactura) REFERENCES ce_facturas(IdFactura)
-		ON DELETE NO ACTION
-		ON UPDATE NO ACTION
-go
-
-
-
-
-ALTER TABLE ce_facturas_estatus
-	ADD  FOREIGN KEY (IdEstatus) REFERENCES cat_estatus(IdEstatus)
-		ON DELETE NO ACTION
-		ON UPDATE NO ACTION
-go
-
-
-
-
-
-
-CREATE TABLE cat_estatus
-( 
-	IdEstatus            integer  NOT NULL ,
-	IdTipoEstatus        integer  NOT NULL ,
-	DesEstatus           varchar(50)  NULL ,
-	Activo               char(1)  NULL ,
-	Borrado              char(1)  NULL ,
-	FechaReg             datetime  NULL ,
-	UsuarioReg           varchar(20)  NULL ,
-	FechaUltMod          datetime  NULL ,
-	UsuarioMod           varchar(20)  NULL 
-)
-go
-
-
-
-ALTER TABLE cat_estatus
-	ADD  PRIMARY KEY (IdEstatus ASC)
-go
-
-
-
-CREATE INDEX XIF1cat_estatus ON cat_estatus
-( 
-	IdTipoEstatus         ASC
-)
-go
 
 
 
@@ -147,7 +61,7 @@ CREATE TABLE cat_periodos
 	NombreCorto          varchar(30)  NULL ,
 	PeriodoIni           datetime  NULL ,
 	PeriodoFin           datetime  NULL ,
-	Año                  smallint  NULL ,
+	AÃ±o                  smallint  NULL ,
 	NumPeriodo           char(1)  NULL ,
 	ClavePeriodo         varchar(5)  NULL ,
 	TipoPeriodo          varchar(50)  NULL ,
@@ -2652,3 +2566,91 @@ ALTER TABLE rh_cat_telefonos
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION
 go
+
+CREATE TABLE ce_facturas_estatus
+( 
+	IdFactura            integer  NOT NULL ,
+	IdEstatusDet         int  NOT NULL ,
+	Actual               varchar(1)  NULL ,
+	Observacion          varchar(255)  NULL ,
+	FechaReg             datetime  NULL ,
+	UsuarioReg           varchar(20)  NULL ,
+	FechaUltMod         datetime  NULL ,
+	UsuarioMod           varchar(20)  NULL ,
+	IdEstatus            integer  NULL 
+)
+go
+
+
+
+ALTER TABLE ce_facturas_estatus
+	ADD  PRIMARY KEY  CLUSTERED (IdFactura ASC,IdEstatusDet ASC)
+go
+
+
+
+CREATE NONCLUSTERED INDEX XIF1ce_facturas_estatus ON ce_facturas_estatus
+( 
+	IdFactura             ASC
+)
+go
+
+
+
+CREATE NONCLUSTERED INDEX XIF2ce_facturas_estatus ON ce_facturas_estatus
+( 
+	IdEstatus             ASC
+)
+go
+
+
+
+
+ALTER TABLE ce_facturas_estatus
+	ADD  FOREIGN KEY (IdFactura) REFERENCES ce_facturas(IdFactura)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION
+go
+
+
+
+
+ALTER TABLE ce_facturas_estatus
+	ADD  FOREIGN KEY (IdEstatus) REFERENCES cat_estatus(IdEstatus)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION
+go
+
+
+
+
+
+
+CREATE TABLE cat_estatus
+( 
+	IdEstatus            integer  NOT NULL ,
+	IdTipoEstatus        integer  NOT NULL ,
+	DesEstatus           varchar(50)  NULL ,
+	Activo               char(1)  NULL ,
+	Borrado              char(1)  NULL ,
+	FechaReg             datetime  NULL ,
+	UsuarioReg           varchar(20)  NULL ,
+	FechaUltMod          datetime  NULL ,
+	UsuarioMod           varchar(20)  NULL 
+)
+go
+
+
+
+ALTER TABLE cat_estatus
+	ADD  PRIMARY KEY (IdEstatus ASC)
+go
+
+
+
+CREATE INDEX XIF1cat_estatus ON cat_estatus
+( 
+	IdTipoEstatus         ASC
+)
+go
+
