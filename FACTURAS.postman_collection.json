@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "f104bb52-a4d3-4199-bdaa-79f336947379",
+		"name": "FACTURAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "estatus",
+			"item": [
+				{
+					"name": "https://localhost:44383/api/estatus/publicar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idE",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "idF",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "idED",
+									"value": "1333333333",
+									"type": "text"
+								},
+								{
+									"key": "Act",
+									"value": "S",
+									"type": "text"
+								},
+								{
+									"key": "Obs",
+									"value": "Prueba",
+									"type": "text"
+								},
+								{
+									"key": "Fecha",
+									"value": "20/05/2019 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "UsuarioR",
+									"value": "EQUIPOFACTURAS",
+									"type": "text"
+								},
+								{
+									"key": "FechaU",
+									"value": "20/05/2019 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "UsuarioM",
+									"value": "EQUIPOFACTURAS",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44383/api/estatus/publicar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"estatus",
+								"publicar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44383/api/estatus/detalle/?idE=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/estatus/detalle/?idE=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"estatus",
+								"detalle",
+								""
+							],
+							"query": [
+								{
+									"key": "idE",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Individual"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "facturas",
+			"item": [
+				{
+					"name": "https://localhost:44383/api/facturas/lista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/facturas/lista",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"facturas",
+								"lista"
+							]
+						},
+						"description": "TODAS"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44383/api/facturas/publicar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idF",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "idV",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "folio",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "idE",
+									"value": "456",
+									"type": "text"
+								},
+								{
+									"key": "idD",
+									"value": "899",
+									"type": "text"
+								},
+								{
+									"key": "IdRec",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "IdDom",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "SubT",
+									"value": "1567",
+									"type": "text"
+								},
+								{
+									"key": "Iv",
+									"value": "100.0",
+									"type": "text"
+								},
+								{
+									"key": "Tot",
+									"value": "1867",
+									"type": "text"
+								},
+								{
+									"key": "Fecha",
+									"value": "20/05/2019 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "UsuarioR",
+									"value": "EQUIPOFACTURAS",
+									"type": "text"
+								},
+								{
+									"key": "FechaU",
+									"value": "20/05/2019 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "UsuarioM",
+									"value": "EQUIPOFACTURAS",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44383/api/facturas/publicar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"facturas",
+								"publicar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44383/api/facturas/detalle/?idF=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/facturas/detalle/?idF=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"facturas",
+								"detalle",
+								""
+							],
+							"query": [
+								{
+									"key": "idF",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Individual"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44383/api/facturas/actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idF",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activo",
+									"value": "N",
+									"type": "text"
+								},
+								{
+									"key": "borrado",
+									"value": "S",
+									"type": "text"
+								},
+								{
+									"key": "FechaU",
+									"value": "23/05/2019 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "UsuarioM",
+									"value": "EQUIPOFACTURAS",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44383/api/facturas/actualizar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"facturas",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44383/api/facturas/eliminar/?idF=1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/facturas/eliminar/?idF=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"facturas",
+								"eliminar",
+								""
+							],
+							"query": [
+								{
+									"key": "idF",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

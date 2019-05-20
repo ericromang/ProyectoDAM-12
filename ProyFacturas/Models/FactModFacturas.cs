@@ -12,22 +12,22 @@ namespace ProyFacturas.Models
         public class ce_facturas
         {
             [DatabaseGenerated(DatabaseGeneratedOption.None)]
-            public Int16 IdFactura { get; set; }
-            public Int16 IdVenta { get; set; }
+            public short IdFactura { get; set; }
+            public short IdVenta { get; set; }
             public ce_ventas ce_ventas { get; set; }
             [StringLength(20)]
             public string FolioFactura { get; set; }
-            public Int16 IdEmisor { get; set; }
+            public short IdEmisor { get; set; }
             public rh_cat_personas rh_cat_personas { get; set; }
-            public Int16 IdDomicilioEmisor { get; set; }
+            public short IdDomicilioEmisor { get; set; }
             public rh_cat_domicilios rh_cat_domicilios { get; set; }
-            public Int16 IdReceptor { get; set; }
+            public short IdReceptor { get; set; }
           //  public rh_cat_personas rh_cat_personas { get; set; }
-            public Int16 IdDomicilioReceptor { get; set; }
+            public short IdDomicilioReceptor { get; set; }
           //  public rh_cat_domicilios rh_cat_domicilios { get; set; }
-            public float SubTotal { get; set; }
-            public float IVA { get; set; }
-            public float Total { get; set; }
+            public double SubTotal { get; set; }
+            public double IVA { get; set; }
+            public double Total { get; set; }
             [StringLength(1)]
             public string Activo { get; set; }
             [StringLength(1)]
@@ -44,10 +44,10 @@ namespace ProyFacturas.Models
         public class ce_facturas_estatus
         {
             [DatabaseGenerated(DatabaseGeneratedOption.None)]
-            public Int16 IdFactura { get; set; }
+            public short IdFactura { get; set; }
             public ce_facturas ce_facturas { get; set; }
-            public Int16 IdEstatusDet { get; set; }
-            public Int16 IdEstatus { get; set; }
+            public short IdEstatusDet { get; set; }
+            public int IdEstatus { get; set; }
             //---------------------------------------------------
             [StringLength(1)]
             public string Actual { get; set; }

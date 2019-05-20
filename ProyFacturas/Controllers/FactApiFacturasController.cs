@@ -139,7 +139,7 @@ namespace ProyFacturas.Controllers
         public async Task<IActionResult> EstApiGetListDetalle([FromQuery]int idE)
         {
 
-            var ce_facturas = (from data_inv in FactLoDBContext.ce_facturas_estatus where data_inv.IdEstatusDet == idE select data_inv).ToList();
+            var ce_facturas = (from data_inv in FactLoDBContext.ce_facturas_estatus where data_inv.IdEstatus == idE select data_inv).ToList();
             if (ce_facturas.Count() > 0)
             {
                 ce_facturas = ce_facturas.ToList();
