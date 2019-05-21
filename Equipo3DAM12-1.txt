@@ -1,0 +1,12 @@
+Numero de quipo	3
+Nombre Equipo	SAD
+Desarrollo de Aplicaciones Multiplataforma
+Proyecto Comercio Electronico (Facturas)
+
+Integrantes:
+Nombre 1	Arriola Sanchez Aldair
+Nombre 2	Garcia Gomez Miguel Angel
+Nombre 3	Garcia Landeros Eric Roman
+Nombre 4	Larreta Orihuela Brian Said
+Nombre 5	Magaña Ortiz Adrian
+Nombre 6	Ramos Aguilar Diana Laura
